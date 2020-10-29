@@ -6,18 +6,18 @@ let secondsEl= document.querySelector('.seconds')
 const number = document.querySelectorAll('.number');
 
 function setClock(){
-    let ziua = new Date();
-    let seconds = (ziua.getSeconds())/ 60;
-    let minutes = (seconds + ziua.getMinutes()) / 60;
-    let hours = (minutes + ziua.getHours()) / 12;
+    let day = new Date();
+    let seconds = (day.getSeconds())/ 60;
+    let minutes = (seconds + day.getMinutes()) / 60;
+    let hours = (minutes + day.getHours()) / 12;
 
     setRotation(secondsEl, seconds);
     setRotation(minutesEl, minutes);
     setRotation(hoursEl, hours);
 }
 
-function setRotation(element, rotationRatio){
-    element.style.setProperty('--rotation', rotationRatio * 360)
+function setRotation(element, rotation){
+    element.style.setProperty('--rotation', rotation * 360)
 }
     
 setClock();
