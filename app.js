@@ -4,7 +4,7 @@ let hoursEl= document.querySelector('.hours')
 let minutesEl= document.querySelector('.minutes')
 let secondsEl= document.querySelector('.seconds')
 const number = document.querySelectorAll('.number');
-const clockContainer = document.getElementById('cont');
+const clockContainer = document.querySelector('.container');
 let timezone = 0;
 
 const tzContainer = document.querySelector('.timezone-container');
@@ -14,7 +14,12 @@ btnsArray.forEach(btn=>{
     btn.addEventListener('click', (e)=>{
         timezone = Number(e.target.dataset.time)
         clockContainer.style.backgroundColor = e.target.dataset.color;
-    })
+    });
+})
+
+btnsArray.forEach(btn =>{
+    console.log(btn.dataset.color)
+    btn.style.background = btn.dataset.color;
 })
 
 function setClock(){
