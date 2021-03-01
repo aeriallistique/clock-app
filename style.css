@@ -44,14 +44,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
-    
+    font-size: 1rem; 
 }
+
 button:hover{
     background: rgb(130, 205, 230) ;
     transform: scale(1.05);
     transition: all .3s ease-in-out;
 }
+
+.rom, .ist, .mac{color: white}
 
 @media only screen and (min-width: 1300px){
     .rom, .las, .mun, .ist, .dub, .mac, .bri, .cur{
